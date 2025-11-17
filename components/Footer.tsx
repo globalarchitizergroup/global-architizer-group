@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(224,185,115,0.05)_0%,transparent_70%)] opacity-40" />
 
       {/* 🔹 Main Footer Content */}
-      <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+      <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 relative z-10">
         {/* 🏢 Company Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -156,24 +156,24 @@ export default function Footer() {
 
               <div className="flex flex-col">
                 <Link
-                  href="tel:+918436969369"
-                  className="hover:text-[#E0B973] transition"
-                >
-                  +91 8436969369
-                </Link>
-
-                <Link
                   href="tel:+919748649999"
                   className="hover:text-[#E0B973] transition"
                 >
                   +91 9748649999
+                </Link>
+
+                <Link
+                  href="tel:+918436969369"
+                  className="hover:text-[#E0B973] transition"
+                >
+                  +91 8436969369
                 </Link>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* ✉️ Subscribe + Pages + Web3Forms */}
+        {/* ✉️ Subscribe */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

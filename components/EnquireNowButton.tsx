@@ -22,7 +22,6 @@ export default function EnquireNowButton() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ✅ Web3Forms Submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
@@ -32,7 +31,6 @@ export default function EnquireNowButton() {
       payload.append("access_key", "1451740e-965b-41de-b42d-eed139082b34");
       payload.append("subject", "New Enquiry - Global Architizer Group");
       payload.append("from_name", "Enquiry Panel");
-
       payload.append("name", formData.name);
       payload.append("email", formData.email);
       payload.append("phone", formData.phone);
@@ -56,29 +54,55 @@ export default function EnquireNowButton() {
       } else {
         setStatus("error");
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
+    } catch {
       setStatus("error");
     }
   };
 
   return (
     <>
-      {/* Floating Button */}
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed right-0 top-3/4 -translate-y-1/2 bg-[#E0B973] text-black font-semibold px-3 py-3 rounded-l-lg shadow-[0_0_15px_rgba(224,185,115,0.5)] z-50 flex items-center gap-1 hover:bg-[#f0cf90] transition-all duration-300"
-        initial={{ x: 100 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-        whileHover={{ x: -4 }}
-      >
-        <span className="[writing-mode:vertical-rl] text-sm tracking-widest font-medium">
-          Enquire Now
-        </span>
-      </motion.button>
+      {/* ======================================================
+           FLOATING SIDEBAR BUTTON (NEW DESIGN)
+      ====================================================== */}
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col shadow-xl rounded-l-xl overflow-hidden">
 
-      {/* Modal */}
+        {/* Top Black Tab */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-black w-12 h-12 flex items-center justify-center hover:bg-neutral-800 transition"
+        >
+          <span className="text-white text-lg">→</span>
+        </button>
+
+        {/* Middle Vertical Enquire Now */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-[#E0B973] w-12 py-4 flex items-center justify-center hover:bg-[#f0cf90] transition"
+        >
+          <span className="[writing-mode:vertical-rl] rotate-180 text-black text-sm font-medium tracking-wide">
+            Enquire Now
+          </span>
+        </button>
+
+        {/* Bottom WhatsApp Button */}
+        <a
+          href="https://wa.me/+919748649999"
+          target="_blank"
+          className="bg-[#25D366] w-12 h-12 flex items-center justify-center hover:bg-[#1ebe59] transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            className="w-6 h-6 fill-white"
+          >
+            <path d="M16.04 2.01C8.31 2.01 2.04 8.28 2.04 16.01c0 2.82.74 5.55 2.16 7.97L2 30l6.21-2.16c2.33 1.28 4.96 1.97 7.83 1.97 7.72 0 14-6.27 14-13.99.01-7.74-6.26-13.81-13.99-13.81zm0 25.3c-2.62 0-5.1-.77-7.23-2.23l-.52-.33-3.7 1.3 1.27-3.6-.34-.56a12.42 12.42 0 0 1-1.88-6.6c0-6.86 5.57-12.43 12.43-12.43s12.43 5.57 12.43 12.43c0 6.86-5.58 12.42-12.46 12.42zm7.14-9.33c-.39-.2-2.3-1.14-2.66-1.27-.36-.13-.62-.2-.87.2-.26.39-1 1.27-1.23 1.54-.23.26-.46.29-.85.1-.39-.2-1.64-.6-3.13-1.91-1.16-1.03-1.94-2.3-2.17-2.69-.23-.39-.02-.6.17-.79.18-.18.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69-.1-.2-.87-2.1-1.2-2.88-.32-.78-.66-.67-.87-.67-.23 0-.49-.03-.75-.03-.26 0-.69.1-1.06.49-.36.39-1.39 1.36-1.39 3.32 0 1.97 1.42 3.87 1.62 4.14.2.26 2.8 4.27 6.81 5.99 4.01 1.72 4.01 1.15 4.72 1.08.72-.07 2.3-.94 2.63-1.85.33-.91.33-1.69.23-1.85-.1-.16-.36-.26-.75-.46z" />
+          </svg>
+        </a>
+      </div>
+
+      {/* ======================================================
+           MODAL PANEL (unchanged)
+      ====================================================== */}
       <AnimatePresence>
         {isOpen && (
           <>
@@ -100,7 +124,6 @@ export default function EnquireNowButton() {
               className="fixed right-0 top-0 h-full w-full max-w-sm bg-[#111111] text-white shadow-2xl z-50 overflow-y-auto border-l border-[#2a2a2a]"
             >
               <div className="p-6">
-                {/* Header */}
                 <div className="flex items-center justify-between mb-5">
                   <h2 className="text-xl font-semibold text-[#E0B973] tracking-wide uppercase">
                     Enquire Now
@@ -114,13 +137,12 @@ export default function EnquireNowButton() {
                 </div>
 
                 <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                  Fill out the form below and our team will get back to you
-                  shortly.
+                  Fill out the form below and our team will get back to you shortly.
                 </p>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  {[ 
+                  {[
                     {
                       label: "Full Name",
                       name: "name",
@@ -168,7 +190,6 @@ export default function EnquireNowButton() {
                     </div>
                   ))}
 
-                  {/* Message */}
                   <div>
                     <label className="block text-xs text-gray-400 mb-1">
                       Message *
@@ -187,7 +208,6 @@ export default function EnquireNowButton() {
                     </div>
                   </div>
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
                     disabled={status === "loading"}
@@ -196,7 +216,6 @@ export default function EnquireNowButton() {
                     {status === "loading" ? "Sending..." : "Submit Enquiry"}
                   </button>
 
-                  {/* Status Messages */}
                   {status === "success" && (
                     <motion.p
                       initial={{ opacity: 0, y: -5 }}
@@ -218,7 +237,6 @@ export default function EnquireNowButton() {
                   )}
                 </form>
 
-                {/* Footer Contact Info */}
                 <div className="mt-8 border-t border-[#2a2a2a] pt-4 text-xs text-gray-500">
                   Email:{" "}
                   <a

@@ -92,7 +92,7 @@ export default function Navbar({
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
                 whileTap={{ scale: 0.9 }}
-                className="relative w-10 h-10 flex flex-col justify-center items-center group"
+                className="relative w-10 h-10 flex flex-col justify-center items-center group cursor-pointer"
               >
                 {/* Top line */}
                 <motion.span
@@ -111,7 +111,9 @@ export default function Navbar({
                 {/* Bottom line */}
                 <motion.span
                   className="w-7 h-[2.5px] bg-white rounded-full mt-1 block group-hover:bg-[#E0B973]"
-                  animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                  animate={
+                    isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+                  }
                   transition={{ duration: 0.35 }}
                 />
               </motion.button>
@@ -147,7 +149,7 @@ export default function Navbar({
               <motion.button
                 onClick={() => setIsOpen(false)}
                 whileHover={{ rotate: 90 }}
-                className="absolute top-6 right-6 text-white hover:text-[#E0B973]"
+                className="absolute top-6 right-6 text-white hover:text-[#E0B973] cursor-pointer"
               >
                 <X size={26} />
               </motion.button>
@@ -157,7 +159,7 @@ export default function Navbar({
                 <Image
                   src="/logo.png"
                   width={160}
-                  height={70}
+                  height={50}
                   alt="Sidebar Logo"
                   className="object-contain opacity-100"
                 />
@@ -180,10 +182,13 @@ export default function Navbar({
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="flex items-center gap-4 text-lg text-gray-300 uppercase tracking-wide 
-                                   hover:text-[#E0B973] transition-all group"
+                        className="flex items-center gap-4 text-sm text-gray-300 uppercase tracking-wide 
+                                hover:text-[#E0B973] transition-all group"
                       >
-                        <Icon className="text-[#E0B973] group-hover:scale-110 transition" size={20} />
+                        <Icon
+                          className="text-[#E0B973] group-hover:scale-110 transition"
+                          size={20}
+                        />
                         {item.name}
                       </Link>
                     </motion.div>

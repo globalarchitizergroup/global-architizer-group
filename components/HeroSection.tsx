@@ -17,7 +17,7 @@ export default function HeroSection() {
       {/* 🖼 Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/bg1.jpg"
+          src="/images/bg.jpg"
           alt="Luxury Real Estate Background"
           fill
           priority
