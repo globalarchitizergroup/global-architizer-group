@@ -79,18 +79,49 @@ export default function WhyChooseGAG() {
             transition={{ duration: 1 }}
             className="flex-1 text-left"
           >
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl">
-              GAG Developments stands as a symbol of excellence and trust, with
-              an expanding portfolio of high-end architectural projects across
-              India and the Middle East. Our commitment to precision,
-              innovation, and client satisfaction has positioned us among the
-              region’s most respected developers.
+            <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl text-justify">
+              GAG Developments embodies
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                Excellence and Trust
+              </span>
+              , evidenced by an expanding portfolio of
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                premium architectural projects throughout India
+              </span>
+              . Our steadfast dedication to
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                precision, innovation, and client satisfaction
+              </span>
+              has established our reputation as a
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                highly respected development firm
+              </span>
+              in the region.
               <br />
               <br />
-              With an in-house team of architects, engineers, and project
-              managers, we deliver integrated design and construction solutions
-              that meet the highest standards of quality and aesthetics.
+              We utilize a dedicated, in-house team of
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                architects, engineers, and project managers
+              </span>
+              to deliver
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                fully integrated design and construction solutions
+              </span>
+              . These solutions consistently adhere to the most stringent
+              standards for
+              <span className="text-[#E0B973] font-semibold">
+                {" "}
+                quality, functionality, and aesthetic appeal
+              </span>
+              .
             </p>
+
             {/* ✉️ Contact Button
             <motion.div
               initial={{ opacity: 0, y: 20 }}

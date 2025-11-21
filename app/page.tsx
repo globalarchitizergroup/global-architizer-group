@@ -11,6 +11,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import EnquireNowButton from "@/components/EnquireNowButton";
 import React, { useState } from "react";
+import ClientsSection from '@/components/ClientsSection';
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ export default function HomePage() {
       <ExpertiseSection />
       <PortfolioSection />
       <TestimonialsSection />
+      <ClientsSection />
 
       <Footer />
       <ScrollToTop />

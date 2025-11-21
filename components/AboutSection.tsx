@@ -30,6 +30,9 @@ export default function AboutSection() {
 
   return (
     <section className="relative w-full py-20 bg-[#0E0E0E] text-white overflow-hidden">
+            {/* 🌅 Fade Transitions to Blend with Black Sections */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent pointer-events-none" />
       {/* ✨ Subtle radial gold texture for elegance */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(224,185,115,0.05)_0%,transparent_70%)] opacity-40 pointer-events-none" />
 

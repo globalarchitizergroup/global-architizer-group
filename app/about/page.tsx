@@ -161,59 +161,70 @@ export default function AboutPage() {
       </section>
 
       {/* 👥 LEADERSHIP */}
-      <section className="bg-[#0A0A0A] text-white py-24 px-6 lg:px-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="font-playfair text-[#E0B973] text-3xl md:text-4xl font-semibold uppercase text-center mb-16 tracking-wide"
-        >
-          Our Leadership
-        </motion.h2>
-
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <section className="py-24 px-0 bg-[#0A0A0A]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
+          {/* LEFT — IMAGE FULL HEIGHT */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="flex-1 rounded-2xl overflow-hidden shadow-lg"
+            className="relative w-full h-[450px] lg:h-[600px]"
           >
             <Image
-              src="/images/hero-bg.jpg"
-              alt="Leadership"
-              width={600}
-              height={500}
-              className="object-cover w-full h-[420px] lg:h-[500px] rounded-2xl"
+              src="/images/hero-bg.jpg" 
+              alt="About GAG"
+              fill
+              className="object-cover"
             />
           </motion.div>
 
+          {/* RIGHT — TEXT PANEL */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="flex-1 text-justify space-y-6"
+            className="bg-[#0A0A0A] px-8 lg:px-16 py-12 flex flex-col justify-center"
           >
-            <p className="font-playfair text-[#E0B973] italic text-lg md:text-xl leading-relaxed">
-              “The function of leadership is to produce more leaders, not more
-              followers.”
-            </p>
+            <h2 className="text-[#E0B973] font-playfair text-3xl md:text-4xl font-semibold uppercase tracking-wide mb-8">
+              Welcome to Global Architizer Group
+            </h2>
 
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              At{" "}
-              <span className="text-[#E0B973] font-semibold">
-                GAG Developments
-              </span>
-              , our mission is clear: to connect investors with high-yielding
-              opportunities in real estate. We specialize in maximizing returns
-              through strategic insight, innovation, and relentless execution.
-            </p>
+            <div className="space-y-6 text-gray-300 text-base md:text-lg leading-relaxed font-light text-justify">
+              <p>
+                In 2015, we envisioned a world shaped by creativity, precision,
+                endurance and craftsmanship. Today, this stands as the
+                cornerstone of our design philosophy and our mission to
+                innovate.
+              </p>
 
-            <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-              Through a client-first approach, we empower individuals and
-              businesses to navigate the evolving property landscape with
-              confidence. Every project we undertake reflects our promise of
-              precision, creativity, and enduring value.
-            </p>
+              <p>
+                With expanding outreach across India and the Middle East, GAG
+                has shaped luxury architectural experiences that merge digital
+                precision with real-world excellence.
+              </p>
+
+              <p>
+                Driven by creativity, persistence and performance, we lead with
+                unmatched expertise in architecture, interior design,
+                engineering and turnkey project solutions.
+              </p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-10"
+            >
+              <a
+                href="/files/company-profile.pdf"
+                download
+                className="inline-flex items-center gap-2 px-8 py-3 border border-[#E0B973] text-[#E0B973] rounded-full uppercase text-sm tracking-widest hover:bg-[#E0B973] hover:text-black transition-all"
+              >
+                <Download className="w-5 h-5" />
+                Download Profile
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </section>

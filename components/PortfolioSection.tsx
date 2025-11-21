@@ -7,28 +7,28 @@ import Link from "next/link";
 export default function PortfolioSection() {
   const projects = [
     {
-      title: "Luxury Villa — Dubai Hills",
-      image: "/images/portfolio1.jpg",
+      title: "Sport Assembly Club — Ranigunj, West Bengal",
+      image: "/images/Projects/project1.jpg",
     },
     {
-      title: "Modern Apartment — Kolkata",
-      image: "/images/portfolio2.jpg",
+      title: "SharePunjab — Kolkata, West Bengal",
+      image: "/images/Projects/project2.jpg",
     },
     {
-      title: "Corporate Tower — Downtown Dubai",
-      image: "/images/portfolio3.jpg",
+      title: "",
+      image: "/images/Projects/project3.tif",
     },
     {
-      title: "Residential Complex — Ras Al Khaimah",
-      image: "/images/portfolio4.jpg",
+      title: "Dr. SK Isser Residential Triplex Project — SHC, Bihar",
+      image: "/images/Projects/project4.jpg",
     },
     {
-      title: "Beachfront Residence — Abu Dhabi",
-      image: "/images/portfolio5.jpg",
+      title: "Hotel Holiday INN  — SHC, Bihar",
+      image: "/images/Projects/project5.jpg",
     },
     {
-      title: "Skyline Heights — Mumbai",
-      image: "/images/portfolio6.jpg",
+      title: "Hotel New Park Inn. — Kharagpur, West Bengal",
+      image: "/images/Projects/project6.jpg",
     },
   ];
 
