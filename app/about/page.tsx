@@ -59,7 +59,7 @@ export default function AboutPage() {
           </motion.p>
         </motion.div>
 
-        {/* ⬇️ Scroll Arrow */}
+        {/* Scroll Icon */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
@@ -70,120 +70,30 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* 🏛 INTRODUCTION */}
-      <section className="py-24 px-6 lg:px-20 bg-[#0A0A0A]">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="max-w-5xl mx-auto"
-        >
-          <div className="space-y-8 text-gray-300 text-base md:text-lg leading-relaxed font-light text-justify">
-            <p>
-              At{" "}
-              <span className="text-[#E0B973] font-medium">
-                Global Architizer Group
-              </span>
-              , we believe architecture is not just about structures — it’s
-              about stories, emotions, and legacies. With an in-house team of
-              architects, interior designers, and engineers, we craft spaces
-              that are both functional and emotionally resonant.
-            </p>
-
-            <p>
-              From conceptualization to execution, every project is guided by a
-              commitment to precision and purpose. Our integrated approach
-              ensures seamless collaboration between design and construction,
-              delivering exceptional results that exceed expectations.
-            </p>
-
-            <p>
-              Headquartered in Kolkata,{" "}
-              <span className="text-[#E0B973] font-medium">GAG</span> has
-              expanded its footprint across India, setting new benchmarks in
-              luxury residential, hospitality, and commercial spaces. Each
-              creation is a testament to our pursuit of excellence, innovation,
-              and trust.
-            </p>
-
-            <p>
-              Our mission is simple yet powerful — to make world-class design
-              accessible, efficient, and timeless. By merging advanced
-              technology with creative brilliance, we bring visions to life that
-              inspire generations.
-            </p>
-          </div>
-
-          {/* 🧾 Download PDF */}
-          <motion.a
-            href="/files/company-profile.pdf"
-            download
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 15px #E0B973",
-            }}
-            transition={{ duration: 0.3 }}
-            className="inline-flex items-center gap-2 mt-12 px-8 py-3 border border-[#E0B973] text-[#E0B973] rounded-full text-sm uppercase tracking-widest hover:bg-[#E0B973] hover:text-black transition-all duration-300"
-          >
-            <Download className="w-5 h-5" />
-            Download Company Profile
-          </motion.a>
-        </motion.div>
-      </section>
-
-      {/* 📊 METRICS */}
-      <section className="relative py-24 bg-[#0A0A0A]">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#E0B973]/5 to-transparent opacity-70 pointer-events-none"></div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-12 px-6 text-center"
-        >
-          {metrics.map((metric, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              className="relative flex flex-col items-center justify-center"
-            >
-              <h3 className="font-playfair text-[#E0B973] text-6xl md:text-7xl font-semibold drop-shadow-[0_0_10px_rgba(224,185,115,0.3)]">
-                {metric.number}
-              </h3>
-              <p className="text-gray-400 text-xs md:text-sm uppercase tracking-[0.3em] mt-4">
-                {metric.label}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
-
-      {/* 👥 LEADERSHIP */}
-      <section className="py-24 px-0 bg-[#0A0A0A]">
+      {/* 🆕 NEW CONTENT SECTION (PREMIUM LAYOUT) */}
+      <section className="mt-7 mb-8 px-0 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
-          {/* LEFT — IMAGE FULL HEIGHT */}
+          {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="relative w-full h-[450px] lg:h-[600px]"
+            className="relative w-full h-[520px] lg:h-[700px]"
           >
             <Image
-              src="/images/hero-bg.jpg" 
-              alt="About GAG"
+              src="/images/hero-bg.jpg"
+              alt="Company Visual"
               fill
               className="object-cover"
             />
           </motion.div>
 
-          {/* RIGHT — TEXT PANEL */}
+          {/* RIGHT TEXT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="bg-[#0A0A0A] px-8 lg:px-16 py-12 flex flex-col justify-center"
+            className="px-8 lg:px-16 py-12 flex flex-col justify-center"
           >
             <h2 className="text-[#E0B973] font-playfair text-3xl md:text-4xl font-semibold uppercase tracking-wide mb-8">
               Welcome to Global Architizer Group
@@ -200,32 +110,71 @@ export default function AboutPage() {
               <p>
                 With expanding outreach across India and the Middle East, GAG
                 has shaped luxury architectural experiences that merge digital
-                precision with real-world excellence.
+                precision with real-world excellence. Our projects reflect
+                imagination elevated through technology and dedication.
               </p>
 
               <p>
-                Driven by creativity, persistence and performance, we lead with
-                unmatched expertise in architecture, interior design,
-                engineering and turnkey project solutions.
+                Driven by creativity, persistence and excellence, we bring
+                unmatched expertise across architecture, interior design,
+                engineering and turnkey project solutions—building iconic spaces
+                that stand beyond time.
               </p>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-10"
+            {/* CTA BUTTON UPDATED */}
+            <motion.a
+              href="/files/company-profile.pdf"
+              download
+              whileHover={{
+                scale: 1.06,
+                boxShadow: "0 0 20px rgba(224,185,115,0.45)",
+              }}
+              transition={{ duration: 0.3 }}
+              className="mx-auto mt-10 px-10 py-3 bg-black border border-[#E0B973] text-[#E0B973] rounded-full uppercase text-sm tracking-widest shadow-xl hover:bg-[#E0B973] hover:text-black transition-all flex items-center gap-3"
             >
-              <a
-                href="/files/company-profile.pdf"
-                download
-                className="inline-flex items-center gap-2 px-8 py-3 border border-[#E0B973] text-[#E0B973] rounded-full uppercase text-sm tracking-widest hover:bg-[#E0B973] hover:text-black transition-all"
-              >
-                <Download className="w-5 h-5" />
-                Download Profile
-              </a>
-            </motion.div>
+              <Download className="w-5 h-5" />
+              Download Company Report
+            </motion.a>
+
+            {/* LOGO */}
+            <div className="flex justify-center mt-10">
+              <Image
+                src="/logo.png"
+                width={220}
+                height={100}
+                alt="Company Logo"
+                className="opacity-80"
+              />
+            </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* 📊 METRICS - HOVER INTERACTION */}
+      <section className="mt-5 mb-10 bg-[#0A0A0A]">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {metrics.map((metric, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+              whileHover={{
+                scale: 1.07,
+                boxShadow: "0 0 25px rgba(224,185,115,0.45)",
+                borderColor: "#E0B973",
+              }}
+              className="p-8 bg-[#0C0C0C] rounded-2xl border border-[#E0B973]/40 text-center transition-all duration-300"
+            >
+              <h3 className="font-playfair text-[#E0B973] text-5xl md:text-6xl font-semibold">
+                {metric.number}
+              </h3>
+              <p className="text-gray-400 text-xs md:text-sm uppercase tracking-[0.25em] mt-4">
+                {metric.label}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </section>
 

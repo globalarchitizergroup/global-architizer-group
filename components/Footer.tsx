@@ -28,7 +28,7 @@ export default function Footer() {
 
       <div className="absolute inset-0 bg-black/75" />
 
-      <div className="absolute top-0 left-0 w-full h-56 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-56 bg-linear-to-b from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent pointer-events-none" />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(224,185,115,0.05)_0%,transparent_70%)] opacity-40" />
 

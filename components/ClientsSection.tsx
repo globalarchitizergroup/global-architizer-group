@@ -24,96 +24,106 @@ export default function ClientsSection() {
     "/clientsLogo/Picture17.jpg",
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const loopLogos = [...logos, ...logos];
 
   return (
-    <section className="w-full py-5 bg-[#0A0A0A] text-white overflow-hidden">
+    <section className="relative w-full mt-5 mb-10 bg-[#0A0A0A] text-white overflow-hidden">
+      {/* BACKGROUND IMAGE LAYER */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/clients-bg.png"
+          alt="clients background"
+          fill
+          className="object-cover opacity-100"
+        />
+        {/* Optional darker overlay if needed */}
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
+      </div>
+
       <div className="container mx-auto px-6 md:px-16 lg:px-32">
-        {/* SMALL LABEL */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-[#E0B973] text-base md:text-lg tracking-widest mb-2 uppercase text-center"
+        {/* HEADING LEFT ALIGNED */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-10 text-left"
         >
-          Clients
-        </motion.p>
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase text-[#E0B973]">
+            Our Clients
+          </h2>
 
-        {/* TITLE */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-semibold text-center text-[#E0B973] mb-4 uppercase"
-        >
-          Our Clients
-        </motion.h2>
+          {/* GOLD RAY LINE */}
+          <div className="h-0.5 bg-linear-to-r from-[#E0B973] via-[#E0B973] to-transparent w-[260px] mt-3 mb-6" />
+        </motion.div>
 
-        {/* DIVIDER */}
-        <div className="w-28 h-[2px] bg-gradient-to-r from-transparent via-[#E0B973] to-transparent mx-auto opacity-60 mb-10" />
-
-        {/* UPDATED DESCRIPTION TEXT */}
+        {/* ONE PARAGRAPH TEXT - SMALLER - NO HIGHLIGHTING */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed text-justify mb-12"
+          className="max-w-4xl text-gray-400 text-sm md:text-base leading-relaxed text-justify mb-14"
         >
-          Our clients are{" "}
-          <span className="text-[#E0B973] font-semibold">
-            key to our success
-          </span>{" "}
-          and
-          <span className="text-[#E0B973] font-semibold"> growth</span>. We
-          collaborate with leading organizations in the
-          <span className="text-[#E0B973] font-semibold">
-            {" "}
-            infrastructure, engineering, and real estate sectors
-          </span>
-          .
-          <br />
-          <br />
-          We provide{" "}
-          <span className="text-[#E0B973] font-semibold">
-            customized solutions
-          </span>{" "}
-          and are committed to{" "}
-          <span className="text-[#E0B973] font-semibold">
-            innovation, high standards, integrity
-          </span>
-          , and{" "}
-          <span className="text-[#E0B973] font-semibold">
-            long-term partnerships
-          </span>
-          .
+          Our clients are key to our success and growth. We collaborate with
+          leading organizations in the infrastructure, engineering, and real
+          estate sectors. We provide customized solutions and are committed to
+          innovation, high standards, integrity, and long-term partnerships.
         </motion.p>
 
-        {/* AUTO SCROLL CAROUSEL */}
+        {/* AUTO SCROLL CAROUSEL FIXED */}
         <div className="relative w-full overflow-hidden mb-4">
-          <motion.div
-            className="flex gap-10"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 22,
-              ease: "linear",
-            }}
-          >
-            {loopLogos.map((logo, i) => (
-              <div
-                key={i}
-                className="min-w-[150px] h-[120px] bg-[#121212] border border-[#2a2a2a] hover:border-[#E0B973] rounded-xl flex items-center justify-center transition-all duration-300"
-              >
-                <Image
-                  src={logo}
-                  alt="Client Logo"
-                  width={120}
-                  height={80}
-                  className="object-contain p-3"
-                />
-              </div>
-            ))}
-          </motion.div>
+          <div className="flex whitespace-nowrap">
+            <motion.div
+              className="flex gap-16"
+              animate={{ x: ["0%", "-100%"] }}
+              transition={{
+                repeat: Infinity,
+                duration: 100,
+                ease: "linear",
+              }}
+            >
+              {logos.map((logo, i) => (
+                <div
+                  key={i}
+                  className="w-[140px] h-20 flex items-center justify-center bg-[#121212]/70 rounded-xl"
+                >
+                  <Image
+                    src={logo}
+                    alt="Client Logo"
+                    width={120}
+                    height={60}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </motion.div>
+
+            {/* duplicate row for infinite loop */}
+            <motion.div
+              className="flex gap-16"
+              animate={{ x: ["0%", "-100%"] }}
+              transition={{
+                repeat: Infinity,
+                duration: 100,
+                ease: "linear",
+              }}
+            >
+              {logos.map((logo, i) => (
+                <div
+                  key={`dupe-${i}`}
+                  className="w-[140px] h-20 flex items-center justify-center bg-[#121212]/70 rounded-xl"
+                >
+                  <Image
+                    src={logo}
+                    alt="Client Logo"
+                    width={120}
+                    height={60}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
