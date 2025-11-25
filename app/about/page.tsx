@@ -28,7 +28,7 @@ export default function AboutPage() {
       {/* 🌆 HERO SECTION */}
       <section className="relative h-[100vh] w-full flex flex-col items-center justify-center overflow-hidden text-center">
         <Image
-          src="/images/bg1.jpg"
+          src="/images/hero-bg.jpg"
           alt="About Global Architizer Group"
           fill
           className="object-cover opacity-80"
