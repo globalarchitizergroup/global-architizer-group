@@ -81,7 +81,7 @@ export default function AboutPage() {
             className="relative w-full h-[520px] lg:h-[700px]"
           >
             <Image
-              src="/images/hero-bg.jpg"
+              src="/images/about-bg.jpg"
               alt="Company Visual"
               fill
               className="object-cover"

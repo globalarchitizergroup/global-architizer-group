@@ -82,8 +82,7 @@ export default function PortfolioPage() {
             transition={{ delay: 0.6, duration: 1 }}
             className="font-playfair text-4xl md:text-6xl font-semibold uppercase leading-tight mb-6"
           >
-            Our Portfolio of{" "}
-            <br/>
+            Our Portfolio of <br />
             <span className="text-[#E0B973]">Visionary Developments</span>
           </motion.h1>
 
@@ -123,26 +122,25 @@ export default function PortfolioPage() {
           className="text-gray-300 text-lg leading-relaxed tracking-wide"
         >
           At{" "}
-          <span className="text-[#E0B973] font-medium">
-            BNW Real Estate Developments
-          </span>
-          , we are focused on transforming visionary concepts into reality. With
-          a steadfast commitment to innovation and excellence, we specialize in
-          creating exceptional properties that stand out in the market,
-          priding ourselves on high-end luxury projects that shape the future of
-          Ras Al Khaimah and Dubai.
+          <span className="text-[#E0B973] font-medium">GAG Developments</span>
+          , we transform visionary concepts into exceptional built environments.
+          With a strong commitment to innovation, precision, and excellence, we
+          deliver high-quality real estate, construction, and interior solutions
+          that set new benchmarks in the industry. Our portfolio reflects a
+          dedication to superior design, engineering expertise, and seamless
+          project execution across India and the Middle East.
           <br />
           <br />
-          In addition to our development capabilities, we offer strategic
-          support to help you navigate and optimize your real estate
-          investments. Partner with us to experience exceptional luxury living
-          and be part of the transformative growth in the UAE real estate
-          market.
+          In addition to our development and construction capabilities, we offer
+          strategic advisory services to help clients plan, optimize, and
+          enhance the value of their real estate investments. Partner with GAG
+          Developments to experience unmatched quality, integrated solutions,
+          and a future-focused approach to modern living and commercial spaces.
         </motion.p>
       </section>
 
       {/* 📊 METRICS SECTION */}
-      <section className="py-20 bg-[#0A0A0A] text-white">
+      <section className="py-20 bg-[#0A0A0A] text-white cursor-pointer">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +172,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* 🏢 PROJECTS SECTION */}
-      <section className="py-20 px-6 lg:px-20 max-w-6xl mx-auto">
+      <section className="py-20 px-6 lg:px-20 max-w-6xl mx-auto cursor-pointer">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -95,9 +95,9 @@ export default function PortfolioSection() {
 
                 {/* Text Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <h3 className="text-[#E0B973] text-lg md:text-xl font-semibold mb-1">
+                  {/* <h3 className="text-[#E0B973] text-lg md:text-xl font-semibold mb-1">
                     {project.title}
-                  </h3>
+                  </h3> */}
                   <p className="text-gray-300 text-xs uppercase tracking-wider">
                     View Details →
                   </p>
