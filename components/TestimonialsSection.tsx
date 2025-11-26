@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
     <section className="relative w-full py-20 bg-[#0A0A0A] text-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20">
         {/* ✨ Heading */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -59,6 +59,31 @@ export default function TestimonialsSection() {
           </h2>
           <div className="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 mt-3 opacity-70" />
           <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            Discover why our clients trust us to bring their visions to life —
+            from luxury residences to landmark developments.
+          </p>
+        </motion.div> */}
+        {/* HEADING – Premium Left Align with Animated Gold Line */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16 text-left max-w-4xl"
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase text-[#D4A556]">
+            What Our Clients Say
+          </h2>
+
+          {/* Animated Gold Underline */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "260px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-0.5 bg-linear-to-r from-[#E0B973] via-[#E0B973] to-transparent mt-3 mb-4"
+          />
+
+          {/* Subtitle */}
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
             Discover why our clients trust us to bring their visions to life —
             from luxury residences to landmark developments.
           </p>

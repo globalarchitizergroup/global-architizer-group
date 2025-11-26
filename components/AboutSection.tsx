@@ -30,27 +30,45 @@ export default function AboutSection() {
 
   return (
     <section className="relative w-full py-20 bg-[#0E0E0E] text-white overflow-hidden">
-            {/* 🌅 Fade Transitions to Blend with Black Sections */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent pointer-events-none" />
+      {/* 🌅 Fade Transitions to Blend with Black Sections */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent pointer-events-none" />
       {/* ✨ Subtle radial gold texture for elegance */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(224,185,115,0.05)_0%,transparent_70%)] opacity-40 pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         {/* 🏗️ Section Title */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-[#E0B973] text-3xl md:text-4xl font-semibold uppercase text-center mb-16"
         >
           About Us
-          <div className="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 mt-3 opacity-70" />
-        </motion.h2>
-        
+          <div className="w-24 h-[1.5px] bg-linear-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 mt-3 opacity-70" />
+        </motion.h2> */}
+        {/* HEADING - Premium Left Align with Animated Gold Line */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-17 text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase text-[#D4A556]">
+            About Us
+          </h2>
+
+          {/* Animated Gold Line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "260px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-0.5 bg-linear-to-r from-[#E0B973] via-[#E0B973] to-transparent mt-3"
+          />
+        </motion.div>
 
         {/* 🧱 Main Content */}
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-50">
           {/* Left Side: Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -61,9 +79,9 @@ export default function AboutSection() {
             <Image
               src="/images/hero-bg.jpg"
               alt="Our Team"
-              width={500}
-              height={500}
-              className="rounded-2xl object-cover grayscale hover:grayscale-0 transition-all duration-500 shadow-[0_0_30px_rgba(0,0,0,0.4)]"
+              width={700}
+              height={700}
+              className="rounded-2xl object-cover"
             />
           </motion.div>
 
@@ -74,11 +92,11 @@ export default function AboutSection() {
             transition={{ duration: 1 }}
             className="flex-1"
           >
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-              At <span className="text-[#E0B973]">Global Architizer Group</span>,
-              we simplify the design and build process. With experts in
-              architecture, interior design, and construction all in-house,
-              we deliver projects that blend speed, precision, and elegance —
+            <p className="text-gray-300 text-base md:text-[17px] leading-relaxed mb-8 max-w-xl">
+              At <span className="text-[#E0B973]">Global Architizer Group</span>
+              , we simplify the design and build process. With experts in
+              architecture, interior design, and construction all in-house, we
+              deliver projects that blend speed, precision, and elegance —
               across Kolkata and India.
               <br />
               <br />

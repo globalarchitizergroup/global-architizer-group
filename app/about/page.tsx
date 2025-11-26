@@ -35,7 +35,7 @@ export default function AboutPage() {
           priority
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +43,7 @@ export default function AboutPage() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative z-10 px-6"
         >
-          <h1 className="font-playfair text-4xl md:text-6xl font-semibold text-[#E0B973] mb-6 uppercase tracking-wide">
+          <h1 className="font-playfair text-4xl md:text-5xl font-semibold text-[#E0B973] mb-6 uppercase tracking-wide">
             About Global Architizer Group
           </h1>
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light text-justify"
+            className="text-gray-300 max-w-2xl mx-auto text-base md:text-md leading-relaxed font-light text-justify"
           >
             Redefining luxury through timeless architecture, innovative design,
             and master craftsmanship — our legacy lies in every detail we
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
             {/* CTA BUTTON UPDATED */}
             <motion.a
-              href="/files/company-profile.pdf"
+              href="/files/GAG Profile.pdf"
               download
               whileHover={{
                 scale: 1.06,
@@ -134,7 +134,7 @@ export default function AboutPage() {
               className="mx-auto mt-10 px-10 py-3 bg-black border border-[#E0B973] text-[#E0B973] rounded-full uppercase text-sm tracking-widest shadow-xl hover:bg-[#E0B973] hover:text-black transition-all flex items-center gap-3"
             >
               <Download className="w-5 h-5" />
-              Download Company Report
+              Download Company Profile
             </motion.a>
 
             {/* LOGO */}

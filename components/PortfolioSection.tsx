@@ -43,7 +43,7 @@ export default function PortfolioSection() {
 
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         {/* 🏗️ Section Heading */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -53,10 +53,34 @@ export default function PortfolioSection() {
             Portfolio
           </h2>
 
-          {/* ✨ Accent Line Under Heading */}
           <div className="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 opacity-70" />
 
           <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            A glimpse into our finest architectural and interior masterpieces —
+            where design meets precision and craftsmanship defines luxury.
+          </p>
+        </motion.div> */}
+        {/* HEADING - Premium Left Align with Animated Gold Line */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16 text-left max-w-4xl"
+        >
+          <h2 className="font-playfair text-3xl md:text-4xl font-semibold uppercase text-[#D4A556]">
+            Portfolio
+          </h2>
+
+          {/* Animated Gold Line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "260px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-[2px] bg-gradient-to-r from-[#E0B973] via-[#E0B973] to-transparent mt-3 mb-4"
+          />
+
+          {/* Sub-text paragraph (Beautiful, subtle, left aligned) */}
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">
             A glimpse into our finest architectural and interior masterpieces —
             where design meets precision and craftsmanship defines luxury.
           </p>
@@ -91,7 +115,8 @@ export default function PortfolioSection() {
                 />
 
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-80 group-hover:opacity-60 transition-all duration-500"></div>
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-70 transition-all duration-500"></div>
+
 
                 {/* Text Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-all duration-500">

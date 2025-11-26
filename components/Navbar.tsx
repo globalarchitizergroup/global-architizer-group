@@ -17,7 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar({
-  onMenuToggle = () => {}, // ✅ Default function to avoid errors
+  onMenuToggle = () => {},
 }: {
   onMenuToggle?: (open: boolean) => void;
 }) {
@@ -60,12 +60,19 @@ export default function Navbar({
           >
             {/* LEFT – Desktop Only */}
             <div className="flex-1 hidden sm:flex items-center gap-8">
-              <Link
+              {/* <Link
                 href="/"
                 className="text-md uppercase tracking-widest text-gray-300 hover:text-[#E0B973] transition"
               >
                 Home
+              </Link> */}
+              <Link
+                href="/"
+                className="flex items-center gap-2 text-gray-300 hover:text-[#E0B973] transition"
+              >
+                <House size={20} className="hover:text-[#E0B973]" />
               </Link>
+
               <Link
                 href="/portfolio"
                 className="text-md uppercase tracking-widest text-gray-300 hover:text-[#E0B973] transition"

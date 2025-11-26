@@ -2,7 +2,6 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { Ruler, Hammer, Home, Layers, Box, Wrench } from "lucide-react";
 
 export default function WhyChooseGAG() {
@@ -60,15 +59,33 @@ export default function WhyChooseGAG() {
     <section className="relative w-full py-20 bg-[#0A0A0A] text-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20">
         {/* 🏗️ Section Heading */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-[#E0B973] text-3xl md:text-4xl font-semibold uppercase text-center mb-16"
         >
           Why Choose GAG
-          <div className="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 mt-3 opacity-70" />
-        </motion.h2>
+          <div className="w-24 h-[1.5px] bg-linear-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 mt-3 opacity-70" />
+        </motion.h2> */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-12 text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase text-[#D4A556]">
+            Why Choose GAG
+          </h2>
+
+          {/* Animated Golden Line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "280px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-0.5 bg-linear-to-r from-[#E0B973] via-[#E0B973] to-transparent mt-3"
+          />
+        </motion.div>
 
         {/* 🏙️ Intro Row */}
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
@@ -79,69 +96,23 @@ export default function WhyChooseGAG() {
             transition={{ duration: 1 }}
             className="flex-1 text-left"
           >
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl text-justify">
-              GAG Developments embodies
+            <p className="text-gray-300 text-base md:text-[17px] leading-relaxed max-w-xl text-justify">
               <span className="text-[#E0B973] font-semibold">
-                {" "}
-                Excellence and Trust
-              </span>
-              , evidenced by an expanding portfolio of
-              <span className="text-[#E0B973] font-semibold">
-                {" "}
-                premium architectural projects throughout India
-              </span>
-              . Our steadfast dedication to
-              <span className="text-[#E0B973] font-semibold">
-                {" "}
-                precision, innovation, and client satisfaction
-              </span>
-              has established our reputation as a
-              <span className="text-[#E0B973] font-semibold">
-                {" "}
-                highly respected development firm
-              </span>
+                GAG Developments
+              </span>{" "}
+              embodies Excellence and Trust, evidenced by an expanding portfolio
+              of premium architectural projects throughout India. Our steadfast
+              dedication to precision, innovation, and client satisfaction has
+              established our reputation as a highly respected development firm
               in the region.
               <br />
               <br />
-              We utilize a dedicated, in-house team of
-              <span className="text-[#E0B973] font-semibold">
-                {" "}
-                architects, engineers, and project managers
-              </span>
-              to deliver
-              <span className="text-[#E0B973] font-semibold">
-                {" "}
-                fully integrated design and construction solutions
-              </span>
-              . These solutions consistently adhere to the most stringent
-              standards for
-              <span className="text-[#E0B973] font-semibold">
-                {" "}
-                quality, functionality, and aesthetic appeal
-              </span>
-              .
+              We utilize a dedicated, in-house team of architects, engineers,
+              and project managers to deliver fully integrated design and
+              construction solutions. These solutions consistently adhere to the
+              most stringent standards for quality, functionality, and aesthetic
+              appeal.
             </p>
-
-            {/* ✉️ Contact Button
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex justify-center mt-16"
-            >
-              <Link href="/contact">
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 0 12px #E0B973",
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="px-10 py-3 border border-[#E0B973] text-[#E0B973] uppercase tracking-widest text-sm font-light rounded-full transition-all duration-300 hover:bg-[#E0B973] hover:text-black"
-                >
-                  Contact Us
-                </motion.button>
-              </Link>
-            </motion.div> */}
           </motion.div>
 
           {/* Right: Image */}
@@ -152,7 +123,7 @@ export default function WhyChooseGAG() {
             className="flex-1 flex justify-center"
           >
             <Image
-              src="/images/whychoosegag.jpg"
+              src="/images/about-bg.jpg"
               alt="Why Choose GAG Developments"
               width={500}
               height={400}

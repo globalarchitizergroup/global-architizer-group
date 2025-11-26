@@ -59,7 +59,7 @@ export default function ExpertiseSection() {
     <section className="relative w-full py-20 bg-[#0A0A0A] text-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20">
         {/* Heading */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -67,7 +67,26 @@ export default function ExpertiseSection() {
         >
           Our Expertise
           <div className="w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#E0B973] to-transparent mx-auto mb-6 mt-3 opacity-70" />
-        </motion.h2>
+        </motion.h2> */}
+        {/* HEADING - Premium Left Align with Animated Gold Line */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-17 text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase text-[#D4A556]">
+            Our Expertise
+          </h2>
+
+          {/* Animated Gold Line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "260px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-0.5 bg-linear-to-r from-[#E0B973] via-[#E0B973] to-transparent mt-3"
+          />
+        </motion.div>
 
         {/* Expertise Cards */}
         <motion.div

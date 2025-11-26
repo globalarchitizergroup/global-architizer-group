@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Navbar from "@/components/Navbar";
@@ -63,7 +63,7 @@ export default function PortfolioPage() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Bottom Fade */}
-        <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent pointer-events-none"></div>
 
         {/* Text Content */}
         <div className="relative z-10 px-6">
@@ -71,7 +71,7 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className="text-[#E0B973] italic text-lg md:text-xl mb-4 tracking-wide"
+            className="text-[#E0B973] italic text-xl md:text-lg mb-4 tracking-wide"
           >
             Crafting Excellence. Shaping Skylines.
           </motion.p>
@@ -80,13 +80,13 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1 }}
-            className="font-playfair text-4xl md:text-6xl font-semibold uppercase leading-tight mb-6"
+            className="font-playfair text-4xl md:text-5xl font-semibold uppercase leading-tight mb-6"
           >
             Our Portfolio of <br />
             <span className="text-[#E0B973]">Visionary Developments</span>
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -95,7 +95,7 @@ export default function PortfolioPage() {
             From luxurious high-rises to serene beachfront villas — explore the
             defining projects that set new standards of design, innovation, and
             craftsmanship in the UAE.
-          </motion.p>
+          </motion.p> */}
         </div>
 
         {/* Animated Scroll Arrow */}
@@ -119,7 +119,7 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-gray-300 text-lg leading-relaxed tracking-wide"
+          className="text-gray-300 text-[17px] md:text-[17px] leading-relaxed tracking-wide"
         >
           At{" "}
           <span className="text-[#E0B973] font-medium">GAG Developments</span>
@@ -128,7 +128,7 @@ export default function PortfolioPage() {
           deliver high-quality real estate, construction, and interior solutions
           that set new benchmarks in the industry. Our portfolio reflects a
           dedication to superior design, engineering expertise, and seamless
-          project execution across India and the Middle East.
+          project execution across India.
           <br />
           <br />
           In addition to our development and construction capabilities, we offer
@@ -137,9 +137,23 @@ export default function PortfolioPage() {
           Developments to experience unmatched quality, integrated solutions,
           and a future-focused approach to modern living and commercial spaces.
         </motion.p>
+        {/* CTA BUTTON BELOW INTRO */}
+        <motion.a
+          href="/files/GAG Profile.pdf"
+          download
+          whileHover={{
+            scale: 1.06,
+            boxShadow: "0 0 20px rgba(224,185,115,0.45)",
+          }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto mt-10 px-10 py-3 bg-black border border-[#E0B973] text-[#E0B973] rounded-full uppercase text-sm tracking-widest shadow-xl hover:bg-[#E0B973] hover:text-black transition-all flex items-center gap-3 w-fit"
+        >
+          <Download className="w-5 h-5" />
+          Download Company Profile
+        </motion.a>
       </section>
 
-      {/* 📊 METRICS SECTION */}
+      {/* 📊 METRICS SECTION
       <section className="py-20 bg-[#0A0A0A] text-white cursor-pointer">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -169,15 +183,15 @@ export default function PortfolioPage() {
         </motion.div>
 
         <div className="mt-12 mx-auto w-24 h-[1.5px] bg-gradient-to-r from-transparent via-[#E0B973]/80 to-transparent opacity-60" />
-      </section>
+      </section> */}
 
       {/* 🏢 PROJECTS SECTION */}
-      <section className="py-20 px-6 lg:px-20 max-w-6xl mx-auto cursor-pointer">
+      <section className="mb-20 mt-5 px-6 lg:px-20 max-w-6xl mx-auto cursor-pointer">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-playfair text-[#E0B973] text-3xl font-semibold uppercase text-center mb-12"
+          className="font-playfair text-[#E0B973] text-5xl font-semibold uppercase text-center mb-12"
         >
           Featured Developments
         </motion.h2>

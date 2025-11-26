@@ -27,8 +27,19 @@ export default function ClientsSection() {
   return (
     <section className="relative w-full mt-5 mb-10 bg-white text-black overflow-hidden py-16">
       <div className="container mx-auto px-6 md:px-16 lg:px-32">
-        
         {/* HEADING */}
+        {/* <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-10 text-left"
+        >
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase text-[#D4A556]">
+            Our Clients
+          </h2>
+          <div className="h-0.5 bg-gradient-to-r from-[#E0B973] via-[#E0B973] to-transparent w-[260px] mt-3 mb-6" />
+        </motion.div> */}
+        {/* HEADING – Animated Gold Underline */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -39,8 +50,13 @@ export default function ClientsSection() {
             Our Clients
           </h2>
 
-          {/* Bright Gold Line */}
-          <div className="h-0.5 bg-gradient-to-r from-[#E0B973] via-[#E0B973] to-transparent w-[260px] mt-3 mb-6" />
+          {/* Animated Golden Line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "260px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-[2px] bg-gradient-to-r from-[#E0B973] via-[#E0B973] to-transparent mt-3 mb-6"
+          />
         </motion.div>
 
         {/* PARAGRAPH */}
@@ -51,15 +67,14 @@ export default function ClientsSection() {
           className="max-w-4xl text-gray-700 text-sm md:text-base leading-relaxed text-justify mb-14"
         >
           Our clients are key to our success and growth. We collaborate with
-          industry-leading organizations across infrastructure, engineering,
-          and real estate sectors—consistently delivering impactful,
+          industry-leading organizations across infrastructure, engineering, and
+          real estate sectors—consistently delivering impactful,
           innovation-driven solutions built on trust and long-term value.
         </motion.p>
 
         {/* AUTO-SCROLL STRIP */}
         <div className="relative w-full overflow-hidden mb-4">
           <div className="flex whitespace-nowrap">
-            
             {/* FIRST ROW */}
             <motion.div
               className="flex gap-20"
@@ -111,10 +126,8 @@ export default function ClientsSection() {
                 </div>
               ))}
             </motion.div>
-
           </div>
         </div>
-
       </div>
     </section>
   );

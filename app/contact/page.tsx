@@ -79,7 +79,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* 🌆 HERO SECTION */}
-      <section className="relative h-[100vh] flex flex-col items-center justify-center text-center overflow-hidden">
+      <section className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/contact-bg.jpg"
@@ -91,7 +91,7 @@ export default function ContactPage() {
         </div>
 
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent pointer-events-none"></div>
 
         <div className="relative z-10 px-6">
           <motion.p
@@ -109,11 +109,11 @@ export default function ContactPage() {
             transition={{ delay: 0.6, duration: 1 }}
             className="font-playfair text-4xl md:text-6xl font-semibold uppercase leading-tight mb-6"
           >
-            Get in Touch With <br />
-            <span className="text-[#E0B973]">Global Architizer Group</span>
+            Get in Touch <br />
+            {/* <span className="text-[#E0B973]">Global Architizer Group</span> */}
           </motion.h1>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -122,7 +122,7 @@ export default function ContactPage() {
             Whether you’re a client, partner, or investor — our team is here to
             help you turn ideas into reality. Reach out today and start your
             journey with us.
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <motion.div
