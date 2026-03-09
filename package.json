@@ -12,8 +12,12 @@
     "cloudinary": "^2.9.0",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.553.0",
+<<<<<<< HEAD
     "mongoose": "^9.2.4",
     "next": "16.0.1",
+=======
+    "next": "16.0.10",
+>>>>>>> 3dd5ba865700992f7a8c3d1a344a34b9e15e642f
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0"
