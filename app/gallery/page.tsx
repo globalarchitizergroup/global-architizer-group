@@ -39,7 +39,7 @@ export default function GalleryPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative h-[100vh] flex flex-col items-center justify-center text-center overflow-hidden">
+      <section className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
         <Image
           src="/images/pic2.jpg"
           alt="Gallery Hero"
@@ -50,7 +50,7 @@ export default function GalleryPage() {
 
         <div className="absolute inset-0 bg-black/70" />
 
-        <div className="absolute bottom-0 w-full h-48 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent" />
+        <div className="absolute bottom-0 w-full h-48 bg-linear-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent" />
 
         <div className="relative z-10 px-6 mt-10">
           <motion.p
@@ -111,7 +111,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="relative overflow-hidden rounded-2xl aspect-[4/3] group"
+              className="relative overflow-hidden rounded-2xl aspect-4/3 group"
             >
               <Image
                 src={img.src}
@@ -152,7 +152,7 @@ export default function GalleryPage() {
                 playsInline
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-60 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-60 transition-opacity duration-700"></div>
 
               <div className="absolute bottom-6 left-6">
                 <p className="text-[#E0B973] italic text-sm font-light tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-700">

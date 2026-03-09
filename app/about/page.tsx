@@ -26,7 +26,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* 🌆 HERO SECTION */}
-      <section className="relative h-[100vh] w-full flex flex-col items-center justify-center overflow-hidden text-center">
+      <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden text-center">
         <Image
           src="/images/hero-bg.jpg"
           alt="About Global Architizer Group"
