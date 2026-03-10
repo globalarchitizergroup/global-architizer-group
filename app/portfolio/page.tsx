@@ -124,8 +124,9 @@ export default function PortfolioPage() {
         </motion.p>
 
         <motion.a
-          href="/files/GAG Profile.pdf"
-          download
+          href="/files/GAG-Profile.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{
             scale: 1.06,
             boxShadow: "0 0 20px rgba(224,185,115,0.45)",
