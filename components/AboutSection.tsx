@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function AboutSection() {
   const metrics = [
-    { number: "1000+", label: "Clients" },
-    { number: "1500+", label: "Completed Projects" },
-    { number: "25+", label: "Ongoing Projects" },
+    { number: "300+", label: "Clients" },
+    { number: "180+", label: "Completed Projects" },
+    { number: "18+", label: "Ongoing Projects" },
   ];
 
   const containerVariants: Variants = {
